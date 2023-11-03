@@ -16,6 +16,12 @@ export default defineNuxtConfig({
       //'@fortawesome/free-brands-svg-icons'
     ],
   },
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
   //  plugins: [
   //   {
   //     src: "~/plugins/fontAwesome.js",

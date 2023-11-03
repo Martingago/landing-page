@@ -3,6 +3,12 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss'
   ],
+
+  runtimeConfig: {
+    public: {
+      API_TOKEN: process.env.API_TOKEN,
+    }
+  },
   css: [
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
@@ -11,9 +17,6 @@ export default defineNuxtConfig({
       "@fortawesome/vue-fontawesome",
       "@fortawesome/fontawesome-svg-core",
       "@fortawesome/pro-solid-svg-icons",
-      //'@fortawesome/pro-regular-svg-icons',
-      //'@fortawesome/pro-light-svg-icons',
-      //'@fortawesome/free-brands-svg-icons'
     ],
   },
   components: [
@@ -22,11 +25,4 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  //  plugins: [
-  //   {
-  //     src: "~/plugins/fontAwesome.js",
-  //     ssr: false,
-  //   },
-  // ],
-  // devtools: { enabled: true }
 })
